@@ -1,90 +1,90 @@
 <html>
     <head>
+        <title>Projet web</title>
+        <!-- implementation framwork grounf css2 -->
         <script src="assets/js/libs/jquery-1.10.2.min.js"></script>
         <script src="assets/js/libs/modernizr-2.6.2.min.js"></script>
         <script src="assets/js/groundwork.all.js"></script>
         <link type="text/css" rel="stylesheet" href="assets/css/groundwork.css">
-        
+        <!--  style pérsonalisé -->
+        <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" type="image/png" href="assets/images/favicon.ico" />
     </head>
     <body>
-        <!-- system grid -->
-        <div class="row">
-            <div class="one fourth two-up-ipad padded">1/4 to 2-up</div>
-            <div class="one fourth two-up-ipad">1/4 to 2-up</div>
-            <div class="one fourth two-up-ipad">1/4 to 2-up</div>
-            <div class="one fourth two-up-ipad">1/4 to 2-up</div>
-        </div>
-        <br>
-        <div class="equalize row">
-            <div class="one third padded">
-              <h1>First Column</h1>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <header>
+            <div class="row logo-menu-header">
+                <div class="one third log-prjt">
+                    <img src="assets/images/worldometers-logo.gif" alt="logo">
+                </div>
+                <div class="two thirds">
+                    <nav  class="">
+                        <ul role="menubar">
+                            <li>Coronavirus</li>
+                            <li>PSopulation</li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div class="one third padded">
-              <h1>Second Column</h1>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+        </header>
+        <!-- update -->
+        <section> 
+            <div class="label-counter">
+                <a href="../index.html">COVID-19 Coronavirus</a> / Graphs
             </div>
-            <div class="one third padded">
-              <h1>Third Column</h1>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-            </div>
-        </div>
-        <!-- table -->
-        <br>
-        <table class="responsive" data-max="15">
-            <thead>
-              <tr>
-                <th>Table Heading</th>
-                <th>Table Heading</th>
-                <th>Table Heading</th>
-                <th>Table Heading</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-              <tr>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-              <tr>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-              <tr>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-                <td>Table cell</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td>Footer cell</td>
-                <td>Footer cell</td>
-                <td>Footer cell</td>
-                <td>Footer cell</td>
-              </tr>
-            </tfoot>
-        </table>
-        <br>
+                <div style="margin-top:20px; padding-bottom:10px; text-align:center; font-size:14px">
+                    <a href="../index.html"><strong>UPDATES</strong></a> - <a href="../coronavirus-cases/index.html"> </a><a href="index.html">Graphs</a> - <a href="../index.html#countries">Countries</a> - <a href="../coronavirus-death-rate/index.html">Death Rate</a> - <a href="../coronavirus-incubation-period/index.html">Incubation</a> - <a href="../coronavirus-age-sex-demographics/index.html">Age</a> - <a href="../coronavirus-symptoms/index.html">Symptoms</a>
+                </div>
+                <div style="font-size:13px; color:#999; text-align:center">Last updated: February 14, 2021, 10:37 GMT</div>
 
-        <!-- icon -->
-        <i class="icon-twitter icon-4x"></i>
-        <i class="icon-usd  icon-4x"></i>
+                <div class="row update-cases">
+                    <div class="one third ">
+                        <h4>Deaths:</h4>
+                        <h5>2,406,677</h5>
+                    </div>
+                    <div class="one third ">
+                        <h4>Coronavirus Cases:</h4>
+                        <h5>109,165,453</h5>
+                        <a href="">view by country</a>
+                    </div>
+                    <div class="one third ">
+                        <h4>Recovered</h4>
+                        <h5>81,211,293</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one fifth"></div>
+                    <div class="three fifths">
+                        <img src="assets/images/update/active-cases.png"  width="40%" alt="">
+                        <img src="assets/images/update/closed-cases.png"  width="40%" alt="">
+                    </div>
+                    <div class="one fifth"></div>
+                </div>
+                <div class="row">
+                    <div class="one fifth"></div>
+                    <div class="three fifths">
+                        <img src="assets/images/update/dialy-deaths.png"  width="40%" alt="">
+                        <img src="assets/images/update/dialy-new-cases.png"  width="40%" alt="">
+                    </div>
+                    <div class="one fifth"></div>
+                </div>
+                <div class="note">
+                    <p class="quicksand">
+                        The charts above are updated after the close of the day in GMT+0. 
+                        <a href="">See more graphs</a>
+                    </p>
+                </div>
+        </section>
+        <!-- information par pays -->
+        <section></section>
+        <!-- historique archived -->
+        <section></section>
+        <!-- liens -->
+        <section></section>
+        <!-- sources -->
+        <section></section>
+        <!-- footer -->
+        <footer>
 
-        <i class="icon-eur icon-4x"></i>
-
-        <i class="icon-file-text icon-4x"></i>
-
-
+        </footer>
     </body>
 </html>
