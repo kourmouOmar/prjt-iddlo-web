@@ -1,13 +1,60 @@
 
+/*class génerique*/
+
+.color-blue{
+    color:#337AB7
+}
+.bg-gery{
+    background-color: #F0F0F0;
+}
+.padding-5px{
+    padding:5px;
+}
+.padding-top-10px{
+    padding-top: 10px;
+}
+.margin-top-10px{
+    margin-top: 10px;
+}
+.color-red{
+    color:red
+}
+.color-green{
+    color:green
+}
+.color-orange{
+    color:orange;
+}
+.width95-mg-auto{
+    width: 95%;
+    margin: auto;
+}
+.width80-mg-auto{
+    width: 80%;
+    margin: auto;
+}
 /*===================
 ==========header =====
 ====================*/
+a:active{
+    color:red !important;
+}
 .logo-menu-header{
     padding-top: 20px;
 }
 .log-prjt img{
     padding-left: 50%;
 }
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e3e7e9;
+}
+.menubar> ul li{
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
 /*===================
 =========body========
 =====================*/
@@ -17,6 +64,8 @@
     border: 0px solid #f5f5f5;
     width: 60vw;
     margin:auto;
+    margin-top: 15px !important;
+
 }
 .fifths{
     text-align: center;
@@ -30,6 +79,85 @@ h4 , h5, .third{
     font-size:8px !important;
     text-align:center;
 }
+/* section 2 */
+.container-img-section-deux{
+    width: 100%;
+    text-align: center;
+}
+.container-img-section-deux img{
+    width: 80%;
+    margin: auto;
+}
+
 /*====================
 ==========footer=======
 =======================*/
+footer {
+    min-height: 100px;
+    background-color: #fff;
+    color: #999;
+    padding-top: 30px;
+    border-top: 1px solid #e3e7e9;
+    margin-top: 40px;
+}
+a:not(.noicon)[href^="https:"]:after {
+    content: "" !important;
+}
+a:not(.noicon)[href*="twitter.com"]:before {
+    content: "";
+}
+a:not(.noicon)[href*="facebook.com"]:before {
+    content: "";
+}
+.text-center {
+    text-align: center;
+}
+.footerlinks {
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+    padding-bottom: 0;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    color: #e5e5e5;
+}
+.footerlinks a {
+    color: #A700FF;
+}
+.socialbuttons {
+    padding-bottom: 20px;
+}
+.list-inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+a .fa-round:hover {
+    color: #fff;
+    background-color: #A700FF;
+    border: 1px solid #A700FF;
+}
+.copy {
+    color: #ddd;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    background-color: #fbfbfb;
+    border-top: 1px solid #e3e7e9;
+}
+
+
+
+.tabs>ul li:hover, [role~=tab]:hover, .tabs>ul li:focus, [role~=tab]:focus,.tabs.accordion>ul li.active {
+    background: green !important;
+    color: white !important;
+}
+
+.tabs>ul li, [role~=tab] {
+    background: #A700FF;
+    color: white;
+}
+

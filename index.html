@@ -9,26 +9,42 @@
         <!--  style pérsonalisé -->
         <link type="text/css" rel="stylesheet" href="assets/css/style.css">
         <link rel="icon" type="image/png" href="assets/images/favicon.ico" />
+        <!-- script -->
+        <script>
+            function getFormatDate(){
+                const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+                var  n =  new Date();
+                var y = n.getFullYear();
+                var m = n.getMonth();
+                var d = n.getDate();
+                document.getElementById("date").innerHTML = monthNames[m] + " " + d + " " + y;
+                document.getElementById("date2").innerHTML = monthNames[m] + " " + (d-1) + " " + y;
+                document.getElementById("date3").innerHTML = monthNames[m] + " " + (d-2) + " " + y;
+                document.getElementById("date4").innerHTML = monthNames[m] + " " + (d-3) + " " + y;
+                document.getElementById("date5").innerHTML = monthNames[m] + " " + (d-4) + " " + y;
+            }
+        </script>
     </head>
-    <body>
+    <body onload="getFormatDate()">
         <header>
             <div class="row logo-menu-header">
                 <div class="one third log-prjt">
-                    <img src="assets/images/worldometers-logo.gif" alt="logo">
+                    <img src="assets/images/logoVersion2.png" alt="logo">
+                    <!-- <p>Wold<span>o</span>Meter</p> -->
                 </div>
                 <div class="two thirds">
-                    <nav  class="">
-                        <ul role="menubar">
-                            <li>Coronavirus</li>
-                            <li>PSopulation</li>
+                    <div  class="menubar">
+                        <ul >
+                            <li><a href="#" style="color:#E400FF; font-weight:bold" active>Coronavirus</a></li>
+                            <li> <a href="#">Population</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
             </div>
         </header>
         <!-- update -->
         <section> 
-            <div class="label-counter">
+            <div class="label-counter margin-top-10px">
                 <a href="../index.html">COVID-19 Coronavirus</a> / Graphs
             </div>
                 <div style="margin-top:20px; padding-bottom:10px; text-align:center; font-size:14px">
@@ -36,19 +52,19 @@
                 </div>
                 <div style="font-size:13px; color:#999; text-align:center">Last updated: February 14, 2021, 10:37 GMT</div>
 
-                <div class="row update-cases">
-                    <div class="one third ">
-                        <h4>Deaths:</h4>
-                        <h5>2,406,677</h5>
+                <div class="row update-cases margin-top-10px">
+                    <div class="one third align-center">
+                        <h2 >Deaths:</h2>
+                        <h1 class="color-red">2,406,677</h1>
                     </div>
-                    <div class="one third ">
-                        <h4>Coronavirus Cases:</h4>
-                        <h5>109,165,453</h5>
+                    <div class="one third align-center">
+                        <h2 >Coronavirus Cases:</h2>
+                        <h1 class="color-orange">109,165,453</h1>
                         <a href="">view by country</a>
                     </div>
-                    <div class="one third ">
-                        <h4>Recovered</h4>
-                        <h5>81,211,293</h5>
+                    <div class="one third align-center ">
+                        <h2>Recovered</h2>
+                        <h1 class="color-green">81,211,293</h1>
                     </div>
                 </div>
                 <div class="row">
@@ -67,7 +83,7 @@
                     </div>
                     <div class="one fifth"></div>
                 </div>
-                <div class="note">
+                <div class="note ">
                     <p class="quicksand">
                         The charts above are updated after the close of the day in GMT+0. 
                         <a href="">See more graphs</a>
@@ -75,16 +91,180 @@
                 </div>
         </section>
         <!-- information par pays -->
-        <section></section>
+        <section>
+            <h4>Reported Cases and Deaths by Country or Territory</h4>
+            <p  class=" small text-center text-section-deux width95-mg-auto">The coronavirus COVID-19 is affecting 219 countries and territories. The day is reset after midnight GMT+0. The list of countries and their regional classification is based on the <span class="color-blue"> United Nations Geoscheme.</span>
+            Sources are  <span class="color-blue"> provided under "Latest News." Learn more about Worldometer's COVID-19 data </span></p>
+            <div class="width80-mg-auto">
+                <span class="color-blue  " >Report coronavirus cases</span>
+            </div>
+
+            <div class="container-img-section-deux">
+                <img src="assets/images/tableu-cases.png" alt="tableux des cases">
+            </div>
+            <div class="small width80-mg-auto"> <span class="success-bg padding-5px">Highlighted in green</span>= all cases have recovered from the infection</div><br>
+            <div class="small width80-mg-auto"> <span class="bg-gery padding-5px">Highlighted in grey</span>=all cases have had an outcome (there are no active cases)</div>
+            <br>
+        </section>
         <!-- historique archived -->
-        <section></section>
+        <section>
+            <div class="tabs ipad width95-mg-auto margin-top-10px">
+                <ul role="tablist">
+                  <li role="tab" aria-controls="#tab1"><span id="date"></span></li>
+                  <li role="tab" aria-controls="#tab2"><span id="date2"></span></li>
+                  <li role="tab" aria-controls="#tab3"><span id="date3"></span></li>
+                  <li role="tab" aria-controls="#tab4"><span id="date4"></span></li>
+                  <li role="tab" aria-controls="#tab5"><span id="date5"></span></li>
+                </ul>
+                <div id="tab1" role="tabpanel">
+                  <h1 class="medium">Updates</h1>
+                  <div class="pull-right pull-none-small-tablet gap-left no-gap-small-tablet align-center">
+                      <img src="assets/images/graph-cases-global.png" width="450px">
+                    </div>
+                    <ul class="small">
+                        <li>5 new cases and 1 new death in Trinidad and Tobago <span class="color-blue">[source]</span></li>
+                        <li>21 new cases in the Turks and Caicos Islands <span class="color-blue">[source]</span></li>
+                        <li>6 new cases in French Polynesia <span class="color-blue">[source]</span></li>
+                        <li>8,439 new cases and 210 new deaths in Peru <span class="color-blue">[source]</span></li>
+                        <li>6 new cases in French Polynesia <span class="color-blue">[source]</span></li>
+                        <li>8,439 new cases and 210 new deaths in Peru <span class="color-blue">[source]</span></li>
+                        <li>29 new cases in Mauritania <span class="color-blue">[source]</span></li>
+                        <li>160 new cases and 1 new death in French Guiana <span class="color-blue">[source]</span></li>
+                    </ul>
+                </div>
+                <div id="tab2" role="tabpanel">
+                    <h1 class="medium">Updates</h1>
+                    <div class="pull-right pull-none-small-tablet gap-left no-gap-small-tablet align-center">
+                        <img src="assets/images/tableu-cases-version2.png" width="450px">
+                      </div>
+                      <ul class="small">
+                          <li>5 new cases and 1 new death in Trinidad and Tobago <span class="color-blue">[source]</span></li>
+                          <li>21 new cases in the Turks and Caicos Islands <span class="color-blue">[source]</span></li>
+                          <li>6 new cases in French Polynesia <span class="color-blue">[source]</span></li>
+                          <li>8,439 new cases and 210 new deaths in Peru <span class="color-blue">[source]</span></li>
+                          <li>29 new cases in Mauritania <span class="color-blue">[source]</span></li>
+                          <li>160 new cases and 1 new death in French Guiana <span class="color-blue">[source]</span></li>
+                          <li>5 new cases and 1 new death in Trinidad and Tobago <span class="color-blue">[source]</span></li>
+                          <li>21 new cases in the Turks and Caicos Islands <span class="color-blue">[source]</span></li>
+                          <li>6 new cases in French Polynesia <span class="color-blue">[source]</span></li>
+                          <li>8,439 new cases and 210 new deaths in Peru <span class="color-blue">[source]</span></li>
+                          <li>29 new cases in Mauritania <span class="color-blue">[source]</span></li>
+                          <li>160 new cases and 1 new death in French Guiana <span class="color-blue">[source]</span></li>
+                      </ul>
+                </div>
+                <div id="tab3" role="tabpanel">
+                    <h1 class="medium">Updates</h1>
+                    <div class="pull-right pull-none-small-tablet gap-left no-gap-small-tablet align-center">
+                        <img src="assets/images/graph-cases-global.png" width="450px">
+                      </div>
+                      <ul class="small">
+                          <li>5 new cases and 1 new death in Trinidad and Tobago <span class="color-blue">[source]</span></li>
+                          <li>21 new cases in the Turks and Caicos Islands <span class="color-blue">[source]</span></li>
+                          <li>6 new cases in French Polynesia <span class="color-blue">[source]</span></li>
+                          <li>8,439 new cases and 210 new deaths in Peru <span class="color-blue">[source]</span></li>
+                          <li>29 new cases in Mauritania <span class="color-blue">[source]</span></li>
+                          <li>6 new cases in French Polynesia <span class="color-blue">[source]</span></li>
+                          <li>8,439 new cases and 210 new deaths in Peru <span class="color-blue">[source]</span></li>
+                          <li>160 new cases and 1 new death in French Guiana <span class="color-blue">[source]</span></li>
+                      </ul>
+                </div>
+                <div id="tab4" role="tabpanel">
+                    <h1 class="medium">Updates</h1>
+                    <div class="pull-right pull-none-small-tablet gap-left no-gap-small-tablet align-center">
+                        <img src="assets/images/tableu-cases-version2.png" width="450px">
+                      </div>
+                      <ul class="small">
+                          <li>5 new cases and 1 new death in Trinidad and Tobago <span class="color-blue">[source]</span></li>
+                          <li>21 new cases in the Turks and Caicos Islands <span class="color-blue">[source]</span></li>
+                          <li>6 new cases in French Polynesia <span class="color-blue">[source]</span></li>
+                          <li>8,439 new cases and 210 new deaths in Peru <span class="color-blue">[source]</span></li>
+                          <li>29 new cases in Mauritania <span class="color-blue">[source]</span></li>
+                          <li>160 new cases and 1 new death in French Guiana <span class="color-blue">[source]</span></li>
+                          <li>8,439 new cases and 210 new deaths in Peru <span class="color-blue">[source]</span></li>
+                          <li>29 new cases in Mauritania <span class="color-blue">[source]</span></li>
+                          <li>160 new cases and 1 new death in French Guiana <span class="color-blue">[source]</span></li>
+                      </ul>
+                </div>
+                <div id="tab5" role="tabpanel">
+                    <h1 class="medium">Updates</h1>
+                    <div class="pull-right pull-none-small-tablet gap-left no-gap-small-tablet align-center">
+                        <img src="assets/images/tableu-cases-version2.png" width="450px">
+                      </div>
+                      <ul class="small">
+                          <li>5 new cases and 1 new death in Trinidad and Tobago <span class="color-blue">[source]</span></li>
+                          <li>21 new cases in the Turks and Caicos Islands <span class="color-blue">[source]</span></li>
+                          <li>6 new cases in French Polynesia <span class="color-blue">[source]</span></li>
+                          <li>8,439 new cases and 210 new deaths in Peru <span class="color-blue">[source]</span></li>
+                          <li>29 new cases in Mauritania <span class="color-blue">[source]</span></li>
+                          <li>160 new cases and 1 new death in French Guiana <span class="color-blue">[source]</span></li>
+                      </ul>
+                </div>
+            </div>
+            <div class="view-more padding-top-10px align-center">
+                <button class="bg-gery " >View More News <i class="icon-double-angle-down "></i></button>
+            </div>
+        </section>
         <!-- liens -->
-        <section></section>
+        <section>
+            <br>
+            <h1 class="align-center">CoronaVirus</h1>
+            
+            <div class="row width95-mg-auto">
+                <div class="one third align-center small ">
+                    <h3>Archived</h3>
+                    Wuhan (the city where the virus originated) is the largest city in Central China,
+                            with a population of over 11 million people. The city, on January 23, shut down transport links. 
+                            Following Wuhan lock down, the city of Huanggang was also placed in quarantine, and the city of Ezhou closed its train stations<b>...</b><br>
+                    <a href="">See more details</a> 
+                    </ul>
+                    
+                </div>
+                <div class="one thirds align-center small">
+                    <h3>MetaData</h3>
+                    More info : <a href="">See more details</a><br>
+                    Sources : <a href="">See more details</a><br>
+                </div>
+                <div class="one thirds align-center small">
+                    <h3>CoronaVirus Impact</h3>
+                    How dangerous is the virus?
+                    <a href="">See more details</a><br> 
+                    How contagious is the Wuhan Coronavirus? (Ro)
+                    <a href="">See more details</a><br>
+                    Fatality Rate (case fatality ratio or CFR) of the Wuhan Coronavirus
+                    <a href="">See more details</a> <br>
+                    Incubation Period (how long it takes for symptoms to appear) 
+                    <a href="">See more details</a> <br>
+                    Age and conditions of Coronavirus cases
+                    <a href="">See more details</a> <br>
+                    WHO Risk Assessment: Global Emergency
+                    <a href="">See more details</a> <br>
+                   
+                </div>
+               
+              </div>
+        </section>
         <!-- sources -->
         <section></section>
         <!-- footer -->
         <footer>
-
+            <div class="footerlinks">
+                <div style="margin-bottom:20px"><a href="https://www.worldometers.info/">
+                    <img src="assets/images/logoVersion2.png" border="0" class="img-footer"></a>
+                </div>
+                <a href="https://www.worldometers.info/about/">about</a> | <a href="https://www.worldometers.info/faq/">faq</a> | <a href="https://www.worldometers.info/languages/">languages</a> | <a href="https://www.worldometers.info/contact/">contact</a>
+            </div>
+                    <ul class="list-inline text-center socialbuttons">
+                        <li><a href="https://www.worldometers.info/newsletter-subscribe/"><i class="icon-bullhorn"></i></a></li>
+                        <li><a href="https://twitter.com/Worldometers"><i class=" icon-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/Worldometers.info"><i class="icon-facebook"></i></a></li>
+                    </ul>
+            <div class="copy">
+                &copy; Copyright Worldometers.info - All rights reserved -
+                <a href="https://www.worldometers.info/disclaimer/">Disclaimer & Privacy Policy</a>
+            </div>
+                
         </footer>
+
+        
     </body>
 </html>
