@@ -203,4 +203,15 @@ a .fa-round:hover {
     .menubar{
         text-align:center !important;
     }
+   
+}
+@media screen and (max-width: 1050px) {
+    .coronavirus-cases{
+        font-size: 20px !important;
+    }
+}
+@media screen and (min-width: 950px) {
+    .coronavirus-cases{
+        font-size: 20px !important;
+    }
 }
