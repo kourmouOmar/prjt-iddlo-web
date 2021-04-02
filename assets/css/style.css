@@ -52,6 +52,10 @@
     width: 95%;
     margin: auto;
 }
+.width90-mg-auto{
+    width: 90%;
+    margin: auto;
+}
 .width80-mg-auto{
     width: 80%;
     margin: auto;
@@ -110,6 +114,12 @@ h4 , h5, .third{
 .container-img-section-deux img{
     width: 80%;
     margin: auto;
+}
+.warning-bg{
+    background: #ffe5c7
+}
+.alert-bg{
+    background: #fcf8e3
 }
 
 /*====================
